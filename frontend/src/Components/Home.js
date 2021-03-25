@@ -9,14 +9,14 @@ const Home = () => {
     }
 
     function openAdmin() {
-        history.push("/admin")
+        history.push("/users")
     }
 
     return (
-        <div className="Home my-5 mx-0">
+        <div className="Home my-3 mx-0">
             <h1 className="my-5">Your design challenge</h1>
-            <button className="btn btn-info m-2" onClick={openSignup}>Registration</button>
-            <button className="btn btn-warning m-2" onClick={openAdmin}>Admin</button>
+            <button className="btn btn-block btn-info p-3" onClick={openSignup}>Signup</button>
+            <button className="btn btn-block btn-warning p-3" onClick={openAdmin}>Admin</button>
         </div>
     )
 }

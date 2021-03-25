@@ -7,6 +7,7 @@ import {
 import Signup from "../Components/Signup";
 import Home from "../Components/Home";
 import Admin from "../Components/Admin";
+import User from "../Components/User";
 
 function Routes({ signUp, users, setUsers }) {
 
@@ -15,8 +16,11 @@ function Routes({ signUp, users, setUsers }) {
             <Route exact path="/signup">
                 <Signup signUp={signUp} />
             </Route>
-            <Route exact path="/admin">
-                <Admin users={users} />
+            <Route exact path="/users">
+                <Admin users={users} setUsers={setUsers} />
+            </Route>
+            <Route exact path="/user/:id">
+                <User />
             </Route>
             <Route exact path="/">
                 <Home />

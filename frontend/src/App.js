@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./Navigation/Routes";
 import YodlrApi from "./API/api";
+import Navbar from "./Navigation/Navbar";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -30,14 +31,15 @@ function App() {
   }
 
   return (
-      <div className="App">
-        <BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
           <header className="App-header">
+            <Navbar />
             <Routes users={users} setUsers={setUsers} signUp={signUp} />
           </header>
-        </BrowserRouter>
-      </div>
-    );
-  }
+      </BrowserRouter>
+    </div>
+  );
+}
 
-  export default App;
+export default App;

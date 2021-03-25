@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Signup.css";
 import { useHistory } from "react-router-dom";
 
 function Signup({ signUp }) {
@@ -9,7 +8,7 @@ function Signup({ signUp }) {
     function handleSubmit(evt) {
         evt.preventDefault();
         signUp(email.trim());
-        history.push("/admin");
+        history.push("/users");
     }
 
     function handleChange(evt) {
@@ -17,7 +16,7 @@ function Signup({ signUp }) {
     }
 
     return (
-        <div className="Signup my-5 mx-0">
+        <div className="Signup my-3 mx-0">
             <h1 className="my-5">Yodlr Registration Portal</h1>
             <form className="Signup-form form-inline" onSubmit={handleSubmit}>
                 <label htmlFor="email">Email:</label>
@@ -31,7 +30,6 @@ function Signup({ signUp }) {
                     Signup
             </button>
             </form>
-            <a className="Signup-adminlink" href="/admin">Admin Page</a>
         </div>
     );
 }

@@ -6,3 +6,11 @@
     color: rgb(102, 102, 255);
     cursor: pointer;
 }
+
+.fa-trash-alt {
+    color: rgba(128, 22, 22);
+}
+
+.fa-trash-alt:hover {
+    color: rgb(177, 35, 35);
+}

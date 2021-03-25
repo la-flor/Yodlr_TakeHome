@@ -27,10 +27,26 @@ class YodlrApi {
         return res;
     }
 
-    static async signUp(email) {
-        let res = await this.request("users", {email}, "post")
+    static async getUser(id) {
+        let res = await this.request(`users/${id}`, { id });
         return res;
     }
+
+    static async updateUser(id, userInfo) {
+        let res = await this.request(`users/${id}`, userInfo, "put");
+        return res;
+    }
+
+    static async deleteUser(id) {
+        let res = await this.request(`users/${id}`, { id }, "delete");
+        return res;
+    }
+
+    static async signUp(email) {
+        let res = await this.request("users", { email }, "post");
+        return res;
+    }
+
 }
 
 export default YodlrApi;
